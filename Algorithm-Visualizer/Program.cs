@@ -1,4 +1,17 @@
-﻿using Raylib_cs;
+﻿/*
+ * Este programa permite visualizar cómo ciertos algoritmos funcionan en la vida real. Se empieza con un número determinado
+ * de barras con valores aleatorios. El usuario deberá elegir el algoritmo deseado pulsando las teclas:
+ *
+ * 1: Bubble Sort
+ * 2: Insertion Sort
+ * 3: Selection Sort
+ * 4: Quick Sort
+ *
+ * Una vez el algoritmo se ha seleccionado, al pulsar espacio las barras comenzarán a ser organizadas según su tamaño, de
+ * menor a mayor y de izquierda a derecha. Se mostrará el número de pasos realizados.
+ */
+
+using Raylib_cs;
 
 namespace Algorithm_Visualizer;
 
@@ -29,6 +42,11 @@ class Program
     // Variables especiales Selection Sort
     private static int _indiceMinimo;
     private static int _ultimoColocado = -1; // Índice del último elemento colocado en su posición final (solo para dibujar)
+
+    // Variables especiales Insertion Sort
+    // _contador
+    // _pasada
+    // _ultimoColocado
 
     // Generador de Arrays
     private static int[] Generador(int numBarras, int altoMin, int altoMax)
